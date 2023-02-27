@@ -1,7 +1,9 @@
 import {createRouter, createWebHistory } from 'vue-router';
 import Home from './views/home.vue';
-import Countries from './views/countries/index.vue';
-
+import Portada from './views/portada.vue';
+import Introduccion from './views/intro.vue';
+import Calendarizacion from './views/cale.vue';
+import Guias from './views/guia.vue';
 
 export default createRouter({
     history: createWebHistory(),
@@ -10,9 +12,37 @@ export default createRouter({
             path: '/',
             component: Home
         },
+    
         {
-            path: '/countries',
-            component: Countries
-        }
+            path: '/portada',
+            name: 'Portada',
+            component: Portada
+
+        },
+
+        {
+            path: '/intro',
+            name: 'Introduccion',
+            component: Introduccion
+
+        },
+
+        {
+            path: '/cale',
+            name: 'Calendarizacion',
+            component: Calendarizacion
+
+        },
+      
+        {
+            path: '/guia',
+            name: 'Guias',
+            component: Guias
+
+        },
+
+       
+      
+        
     ]
 });
